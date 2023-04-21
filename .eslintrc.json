@@ -1,0 +1,55 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "next/core-web-vitals",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "ignorePatterns": ["scripts/app.js"],
+    "rules": {
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "comma-dangle": ["error", "only-multiline"],
+        "curly": "error",
+        "eol-last": "error",
+        "eqeqeq": "error",
+        "semi": ["error", "always"],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "no-alert": "warn",
+        "quotes": ["error", "double"],
+        "no-case-declarations": "off",
+        "no-console": ["error", { "allow": ["warn", "error"] }],
+        "no-const-assign": "error",
+        "no-constant-condition": "off",
+        "no-duplicate-imports": "error",
+        "no-eq-null": "error",
+        "no-extra-semi": "error",
+        "no-fallthrough": "error",
+        "no-lone-blocks": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1, "maxBOF": 0 }],
+        "no-redeclare": "error",
+        "no-explicit-any": "off",
+        "no-trailing-spaces": "error",
+        "no-useless-concat": "error",
+        "space-before-blocks": ["error", "always"],
+        "spaced-comment": ["error", "always"],
+        "space-before-function-paren": "off",
+        "no-lonely-if": "off",
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "max-len": ["error", { "code": 180, "tabWidth": 4 }],
+        "@next/next/no-img-element": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+    }
+}

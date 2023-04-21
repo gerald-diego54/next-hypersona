@@ -1,0 +1,6 @@
+.hyp-input {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    @apply outline-none text-white placeholder-slate-300 border-2;
+}

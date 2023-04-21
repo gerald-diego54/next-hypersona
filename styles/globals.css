@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-gradient-primary {
+        background: linear-gradient(270deg, #0af8ff 0%, #b800f0 100%);
+    }
+}
+
+.gradient-text-primary {
+    background: linear-gradient(270deg, #0af8ff 0%, #b800f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    width: fit-content;
+}
+
+.frame {
+    background: rgba(184, 0, 240, 0.1);
+    padding: 2em;
+    position: relative;
+}
+.frame:after,
+.frame:before {
+    border: 0.1em solid #b800f0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 3%;
+    min-width: 30px;
+}
+.frame:after {
+    border-left: none;
+    right: 0;
+}
+.frame:before {
+    border-right: none;
+    left: 0;
+}
+
+.overlay {
+    display: none !important;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+.font-azaret-mono {
+    font-family: "Azeret Mono", "monospace";
+}
+
+.mantine-Select-item:hover {
+    color: #ffffff !important;
+    font-weight: 700;
+    background-color: #b800f0 !important;
+}
+
+.mantine-Select-item:active {
+    color: #ffffff !important;
+    font-weight: 700;
+    background-color: #b800f0 !important;
+}
+
