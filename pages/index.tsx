@@ -16,7 +16,12 @@ const Home: NextPage = (): JSX.Element => {
             <div className="mx-auto max-w-[1700px] px-7">
                 <Hero />
                 <Feature
-                    title={<p>For <br />Collectors</p>}
+                    title={
+                        <p>
+                            For <br />
+                            Collectors
+                        </p>
+                    }
                     image="/for-collectors.png"
                     description={
                         <React.Fragment>
@@ -40,7 +45,12 @@ const Home: NextPage = (): JSX.Element => {
                     ]}
                 />
                 <Feature
-                    title={<p>For <br />Brands</p>}
+                    title={
+                        <p>
+                            For <br />
+                            Brands
+                        </p>
+                    }
                     image="/for-brands.png"
                     description={
                         <React.Fragment>
@@ -69,7 +79,12 @@ const Home: NextPage = (): JSX.Element => {
                     ]}
                 />
                 <Feature
-                    title={<p>For <br />Communities</p>}
+                    title={
+                        <p>
+                            For <br />
+                            Communities
+                        </p>
+                    }
                     image="/for-communities.png"
                     description={
                         <React.Fragment>

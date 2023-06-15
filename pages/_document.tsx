@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default function Document() {
     return (
@@ -8,7 +7,7 @@ export default function Document() {
                 <link rel="shortcut icon" href="/favicon.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
             </Head>
-            <body className="bg-floppy-disk font-azeret-mono min-w-[100vm]">
+            <body className="min-w-[100vm] bg-floppy-disk font-azeret-mono">
                 <Main />
                 <NextScript />
             </body>

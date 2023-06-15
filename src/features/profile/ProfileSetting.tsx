@@ -20,10 +20,13 @@ const ProfileSetting: React.FC = (): JSX.Element => {
                         <div className="flex items-center justify-center">
                             <Image src="/avatar.png" width={50} height={50} layout="fixed" alt="avatar-current" />
                         </div>
-                        <button className="items-center bg-aqua py-2 px-4 font-azeret-mono text-base font-bold h-[40px] w-[98px] text-floppy-disk font-azeret-mono uppercase">
+                        <button className="h-[40px] w-[98px] items-center bg-aqua py-2 px-4 font-azeret-mono font-azeret-mono text-base font-bold uppercase text-floppy-disk">
                             <div>Upload</div>
                         </button>
-                        <button className="items-center border-2 border-white bg-transparent font-azeret-mono text-base font-bold h-[40px] w-[98px] font-azeret-mono uppercase text-white">
+                        <button
+                            className="h-[40px] w-[98px] items-center border-2
+                        border-white bg-transparent font-azeret-mono font-azeret-mono text-base font-bold uppercase text-white"
+                        >
                             <div>Remove</div>
                         </button>
                     </div>
@@ -48,7 +51,7 @@ const ProfileSetting: React.FC = (): JSX.Element => {
                     <FormInput Icon={OpenseaIcon} placeholder="Opensea" />
                     <FormInput Icon={LooksRareIcon} placeholder="Looks rare" />
                 </div>
-                <button className="mt-5 w-full bg-aqua text-floppy-disk h-[40px] w-[76px] font-azeret-mono text-lg font-bold uppercase md:max-w-[100px]">
+                <button className="mt-5 h-[40px] w-full w-[76px] bg-aqua font-azeret-mono text-lg font-bold uppercase text-floppy-disk md:max-w-[100px]">
                     save
                 </button>
             </form>

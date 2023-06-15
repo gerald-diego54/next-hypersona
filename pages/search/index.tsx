@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import _ from "lodash";
 import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
@@ -40,70 +41,102 @@ const Search: NextPage<{ notFound: boolean }> = ({ notFound }): JSX.Element => {
         }
     }, [notFound, push]);
 
-    const SortNFT = ():JSX.Element => {
-        return(
+    const SortNFT = (): JSX.Element => {
+        return (
             <React.Fragment>
-                { _.isEqual(filterType, "nft-sort") &&
+                {_.isEqual(filterType, "nft-sort") && (
                     <React.Fragment>
-                        <div className="grid grid-row-2 mt-[40px] absolute ml-[-160px] z-30 bg-floppy-disk">
+                        <div className="grid-row-2 absolute z-30 mt-[40px] ml-[-160px] grid bg-floppy-disk">
                             <div className="flex flex-col">
-                                <div className="border-2 border-slate-400 grid grid-row-3">
-                                    <div className="uppercase text-white font-azeret-mono font-bold ml-6 text-base mt-4">by price</div>
-                                    <button className="font-inter text-slate-400 font-[600] text-left text-lg w-[168px] h-[40px] mt-2 mx-4 pl-2">Low to High
+                                <div className="grid-row-3 grid border-2 border-slate-400">
+                                    <div className="ml-6 mt-4 font-azeret-mono text-base font-bold uppercase text-white">
+                                        by price
+                                    </div>
+                                    <button className="mx-4 mt-2 h-[40px] w-[168px] pl-2 text-left font-inter text-lg font-[600] text-slate-400">
+                                        Low to High
                                     </button>
-                                    <button className="font-inter text-slate-400 font-[600] text-left text-lg w-[168px] h-[40px] mb-2 mx-4 pl-2">High to Low
+                                    <button className="mx-4 mb-2 h-[40px] w-[168px] pl-2 text-left font-inter text-lg font-[600] text-slate-400">
+                                        High to Low
                                     </button>
                                 </div>
-                                <div className="border-2 border-slate-400 grid grid-row-3">
-                                    <div className="uppercase text-white font-azeret-mono font-bold text-base ml-6 mt-4">by date</div>
-                                    <button className="font-inter text-slate-400 font-[600] text-left text-lg w-[168px] h-[40px] mt-2 mx-4 pl-2">Newest to Oldest
+                                <div className="grid-row-3 grid border-2 border-slate-400">
+                                    <div className="ml-6 mt-4 font-azeret-mono text-base font-bold uppercase text-white">
+                                        by date
+                                    </div>
+                                    <button className="mx-4 mt-2 h-[40px] w-[168px] pl-2 text-left font-inter text-lg font-[600] text-slate-400">
+                                        Newest to Oldest
                                     </button>
-                                    <button className="font-inter text-slate-400 font-[600] text-left text-lg w-[168px] h-[40px] mb-2 mx-4 pl-2">Oldest to Newest
+                                    <button className="mx-4 mb-2 h-[40px] w-[168px] pl-2 text-left font-inter text-lg font-[600] text-slate-400">
+                                        Oldest to Newest
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </React.Fragment>
-                }
+                )}
             </React.Fragment>
         );
     };
 
-    const FilterNFT = ():JSX.Element => {
-        return(
+    const FilterNFT = (): JSX.Element => {
+        return (
             <React.Fragment>
-                { _.isEqual(filterType, "nft") &&
-                <React.Fragment>
-                    <div className="grid grid-row-2 mt-[40px] absolute z-30 ml-[-570px] bg-floppy-disk">
-                        <div className="flex flex-row">
-                            <div className="border-2 border-slate-400 grid grid-row-3">
-                                <div className="uppercase text-white font-azeret-mono font-bold ml-4 mt-4">by price</div>
-                                <button className="uppercase font-azeret-mono text-white font-[600] bg-[#3f356b] text-left text-lg w-[168px] h-[40px] border-2 my-3 mx-4 border-slate-400 pl-2">min
-                                    <span className="font-inter font-normal text-lg"> 60</span>
-                                    <span className="font-axeret-mono text-white float-right mr-3">$null</span>
-                                </button>
-                                <button className="uppercase font-azeret-mono text-white font-[600] bg-[#3f356b] text-left text-lg w-[168px] h-[40px] border-2 my-3 mx-4 border-slate-400 pl-2">max
-                                    <span className="font-inter font-normal text-lg"> 60</span>
-                                    <span className="font-axeret-mono text-white float-right mr-3">$null</span>
-                                </button>
+                {_.isEqual(filterType, "nft") && (
+                    <React.Fragment>
+                        <div className="grid-row-2 absolute z-30 mt-[40px] ml-[-570px] grid bg-floppy-disk">
+                            <div className="flex flex-row">
+                                <div className="grid-row-3 grid border-2 border-slate-400">
+                                    <div className="ml-4 mt-4 font-azeret-mono font-bold uppercase text-white">
+                                        by price
+                                    </div>
+                                    <button
+                                        className="my-3 mx-4 h-[40px] w-[168px]
+                                border-2 border-slate-400 bg-[#3f356b] pl-2 text-left font-azeret-mono text-lg font-[600] uppercase text-white"
+                                    >
+                                        min
+                                        <span className="font-inter text-lg font-normal"> 60</span>
+                                        <span className="font-axeret-mono float-right mr-3 text-white">$null</span>
+                                    </button>
+                                    <button
+                                        className="my-3 mx-4 h-[40px] w-[168px]
+                                border-2 border-slate-400 bg-[#3f356b] pl-2 text-left font-azeret-mono text-lg font-[600] uppercase text-white"
+                                    >
+                                        max
+                                        <span className="font-inter text-lg font-normal"> 60</span>
+                                        <span className="font-axeret-mono float-right mr-3 text-white">$null</span>
+                                    </button>
+                                </div>
+                                <div className="grid-row-3 grid border-2 border-slate-400">
+                                    <div className="ml-4 mt-4 font-azeret-mono font-bold uppercase text-white">
+                                        by contracts
+                                    </div>
+                                    <button
+                                        className="my-3 mx-4 h-[40px] w-[168px] border-2 border-slate-400
+                                    bg-[#3f356b] pl-2 text-left font-azeret-mono text-lg font-[600] uppercase text-white"
+                                    >
+                                        min
+                                        <span className="font-inter text-lg font-normal"> 60</span>
+                                    </button>
+                                    <button
+                                        className="my-3 mx-4 h-[40px] w-[168px] border-2 border-slate-400
+                                     bg-[#3f356b] pl-2 text-left font-azeret-mono text-lg font-[600] uppercase text-white"
+                                    >
+                                        max
+                                        <span className="font-inter text-lg font-normal"> 60</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div className="border-2 border-slate-400 grid grid-row-3">
-                                <div className="uppercase text-white font-azeret-mono font-bold ml-4 mt-4">by contracts</div>
-                                <button className="uppercase font-azeret-mono text-white font-[600] bg-[#3f356b] text-left text-lg w-[168px] h-[40px] border-2 my-3 mx-4 border-slate-400 pl-2">min
-                                    <span className="font-inter font-normal text-lg"> 60</span>
+                            <div className="border-x-2 border-y-2 border-t-0">
+                                <button className="m-3 h-[40px] w-[87px] bg-white text-base font-bold uppercase text-floppy-disk">
+                                    reset
                                 </button>
-                                <button className="uppercase font-azeret-mono text-white font-[600] bg-[#3f356b] text-left text-lg w-[168px] h-[40px] border-2 my-3 mx-4 border-slate-400 pl-2">max
-                                    <span className="font-inter font-normal text-lg"> 60</span>
+                                <button className="float-right m-3 h-[40px] w-[87px] bg-aqua text-base font-bold uppercase text-floppy-disk">
+                                    apply
                                 </button>
                             </div>
                         </div>
-                        <div className="border-x-2 border-y-2 border-t-0">
-                            <button className="uppercase text-base font-bold text-floppy-disk bg-white m-3 h-[40px] w-[87px]">reset</button>
-                            <button className="uppercase text-base font-bold text-floppy-disk bg-aqua m-3 h-[40px] w-[87px] float-right">apply</button>
-                        </div>
-                    </div>
-                </React.Fragment>
-                }
+                    </React.Fragment>
+                )}
             </React.Fragment>
         );
     };
@@ -126,21 +159,41 @@ const Search: NextPage<{ notFound: boolean }> = ({ notFound }): JSX.Element => {
                             <React.Fragment>
                                 <div className="flex flex-row gap-3">
                                     <button
-                                        className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                        onClick={_.isEqual(filterType, "member") ? () => {setFilterType(""); setOpened(true);} : () => {setFilterType("member"); setOpened(true);}}
+                                        className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                        onClick={
+                                            _.isEqual(filterType, "member")
+                                                ? () => {
+                                                      setFilterType("");
+                                                      setOpened(true);
+                                                  }
+                                                : () => {
+                                                      setFilterType("member");
+                                                      setOpened(true);
+                                                  }
+                                        }
                                     >
                                         Filter
-                                        <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                        <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                     </button>
                                     <button
-                                        className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                        onClick={_.isEqual(filterType, "member-sort") ? () => {setFilterType(""); setOpenedSort(true);} : () => {setFilterType("member-sort"); setOpenedSort(true);}}
+                                        className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                        onClick={
+                                            _.isEqual(filterType, "member-sort")
+                                                ? () => {
+                                                      setFilterType("");
+                                                      setOpenedSort(true);
+                                                  }
+                                                : () => {
+                                                      setFilterType("member-sort");
+                                                      setOpenedSort(true);
+                                                  }
+                                        }
                                     >
                                         Sort
-                                        <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                        <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                     </button>
                                     <Filters filterType={filterType} />
-                                    <Sorts filterType={filterType}/>
+                                    <Sorts filterType={filterType} />
                                     <Drawer
                                         opened={opened}
                                         onClose={() => setOpened(false)}
@@ -203,21 +256,41 @@ const Search: NextPage<{ notFound: boolean }> = ({ notFound }): JSX.Element => {
                             <React.Fragment>
                                 <div className="flex flex-row gap-3">
                                     <button
-                                        className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                        onClick={_.isEqual(filterType, "nft") ? () => {setFilterType(""); setOpenedNFT(true);} : () => {setFilterType("nft"); setOpenedNFT(true);}}
+                                        className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                        onClick={
+                                            _.isEqual(filterType, "nft")
+                                                ? () => {
+                                                      setFilterType("");
+                                                      setOpenedNFT(true);
+                                                  }
+                                                : () => {
+                                                      setFilterType("nft");
+                                                      setOpenedNFT(true);
+                                                  }
+                                        }
                                     >
                                         Filter
-                                        <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                        <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                     </button>
                                     <button
-                                        className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                        onClick={_.isEqual(filterType, "nft-sort") ? () => {setFilterType(""); setOpenedSortNFT(true);} : () => {setFilterType("nft-sort"); setOpenedSortNFT(true);}}
+                                        className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                        onClick={
+                                            _.isEqual(filterType, "nft-sort")
+                                                ? () => {
+                                                      setFilterType("");
+                                                      setOpenedSortNFT(true);
+                                                  }
+                                                : () => {
+                                                      setFilterType("nft-sort");
+                                                      setOpenedSortNFT(true);
+                                                  }
+                                        }
                                     >
                                         Sort
-                                        <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                        <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                     </button>
-                                    { SortNFT() }
-                                    { FilterNFT() }
+                                    {SortNFT()}
+                                    {FilterNFT()}
                                     <Drawer
                                         opened={openedNFT}
                                         onClose={() => setOpenedNFT(false)}

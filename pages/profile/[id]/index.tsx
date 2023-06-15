@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-console */
 import _ from "lodash";
 import MainContainer from "../../../src/layouts/MainContainer";
@@ -35,13 +36,19 @@ const Profile: NextPage = (): JSX.Element => {
                     <Tab.TabGroup className="my-5">
                         <Tab.TabItem
                             active={_.isEqual(activeTab, "collection")}
-                            onClick={() => { setActiveTab("collection"); setFilterType(""); }}
+                            onClick={() => {
+                                setActiveTab("collection");
+                                setFilterType("");
+                            }}
                         >
                             Collection (10)
                         </Tab.TabItem>
                         <Tab.TabItem
                             active={_.isEqual(activeTab, "contracts")}
-                            onClick={() => { setActiveTab("contracts"); setFilterType("");}}
+                            onClick={() => {
+                                setActiveTab("contracts");
+                                setFilterType("");
+                            }}
                         >
                             Contracts (4)
                         </Tab.TabItem>
@@ -54,22 +61,43 @@ const Profile: NextPage = (): JSX.Element => {
                                 <React.Fragment>
                                     <div className="flex flex-row gap-3">
                                         <button
-                                            className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                            onClick={_.isEqual(filterType, "collection") ? () => {setFilterType(""); setOpened(true);} :
-                                                () => {setFilterType("collection"); setOpened(true);}}
+                                            className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase
+                                            text-white md:w-[126px]"
+                                            onClick={
+                                                _.isEqual(filterType, "collection")
+                                                    ? () => {
+                                                          setFilterType("");
+                                                          setOpened(true);
+                                                      }
+                                                    : () => {
+                                                          setFilterType("collection");
+                                                          setOpened(true);
+                                                      }
+                                            }
                                         >
                                             Filter
-                                            <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                            <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                         </button>
                                         <button
-                                            className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                            onClick={_.isEqual(filterType, "collection-sort") ? () => {setFilterType(""); setOpenedSort(true);} : () => {setFilterType("collection-sort"); setOpenedSort(true);}}
+                                            className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase text-white
+                                            md:w-[126px]"
+                                            onClick={
+                                                _.isEqual(filterType, "collection-sort")
+                                                    ? () => {
+                                                          setFilterType("");
+                                                          setOpenedSort(true);
+                                                      }
+                                                    : () => {
+                                                          setFilterType("collection-sort");
+                                                          setOpenedSort(true);
+                                                      }
+                                            }
                                         >
                                             Sort
-                                            <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                            <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                         </button>
                                         <Filters filterType={filterType} />
-                                        <Sorts filterType={filterType}/>
+                                        <Sorts filterType={filterType} />
                                         <Drawer
                                             opened={opened}
                                             onClose={() => setOpened(false)}
@@ -94,7 +122,7 @@ const Profile: NextPage = (): JSX.Element => {
                                 </React.Fragment>
                             }
                             footerButton={
-                                <button className="md:mt-3 mt-[40px] h-[40px] w-full bg-white font-azeret-mono text-floppy-disk text-lg font-bold uppercase">
+                                <button className="mt-[40px] h-[40px] w-full bg-white font-azeret-mono text-lg font-bold uppercase text-floppy-disk md:mt-3">
                                     Load more
                                 </button>
                             }
@@ -128,21 +156,43 @@ const Profile: NextPage = (): JSX.Element => {
                                 <React.Fragment>
                                     <div className="flex flex-row gap-3">
                                         <button
-                                            className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                            onClick={_.isEqual(filterType, "contracts") ? () => {setFilterType(""); setOpenedContract(true);} : () => {setFilterType("contracts"); setOpenedContract(true);}}
+                                            className="h-[40px] w-full border-2 border-slate-400 pl-2
+                                            text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                            onClick={
+                                                _.isEqual(filterType, "contracts")
+                                                    ? () => {
+                                                          setFilterType("");
+                                                          setOpenedContract(true);
+                                                      }
+                                                    : () => {
+                                                          setFilterType("contracts");
+                                                          setOpenedContract(true);
+                                                      }
+                                            }
                                         >
                                             Filter
-                                            <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                            <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                         </button>
                                         <button
-                                            className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                            onClick={_.isEqual(filterType, "contracts-sort") ? () => {setFilterType(""); setOpenedSortContract(true);} : () => {setFilterType("contracts-sort"); setOpenedSortContract(true);}}
+                                            className="h-[40px] w-full border-2 border-slate-400 pl-2
+                                            text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                            onClick={
+                                                _.isEqual(filterType, "contracts-sort")
+                                                    ? () => {
+                                                          setFilterType("");
+                                                          setOpenedSortContract(true);
+                                                      }
+                                                    : () => {
+                                                          setFilterType("contracts-sort");
+                                                          setOpenedSortContract(true);
+                                                      }
+                                            }
                                         >
                                             Sort
-                                            <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                            <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                         </button>
                                         <Filters filterType={filterType} />
-                                        <Sorts filterType={filterType}/>
+                                        <Sorts filterType={filterType} />
                                         <Drawer
                                             opened={openedContract}
                                             onClose={() => setOpenedContract(false)}
@@ -167,7 +217,7 @@ const Profile: NextPage = (): JSX.Element => {
                                 </React.Fragment>
                             }
                             footerButton={
-                                <button className="mt-3 h-[40px] w-full bg-white font-azeret-mono text-floppy-disk text-lg font-bold uppercase">
+                                <button className="mt-3 h-[40px] w-full bg-white font-azeret-mono text-lg font-bold uppercase text-floppy-disk">
                                     Load more
                                 </button>
                             }
@@ -198,4 +248,3 @@ const Profile: NextPage = (): JSX.Element => {
 };
 
 export default Profile;
-

@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import _ from "lodash";
 import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
@@ -56,21 +57,43 @@ const Members: NextPage<{ notFound: boolean }> = ({ notFound }): JSX.Element => 
                                 <React.Fragment>
                                     <div className="flex flex-row gap-3">
                                         <button
-                                            className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                            onClick={_.isEqual(filterType, "member") ? () => {setFilterType(""); setOpened(true);} : () => {setFilterType("member"); setOpened(true);}}
+                                            className="h-[40px] w-full border-2 border-slate-400 pl-2 text-left font-azeret-mono text-base font-bold uppercase
+                                            text-white md:w-[126px]"
+                                            onClick={
+                                                _.isEqual(filterType, "member")
+                                                    ? () => {
+                                                          setFilterType("");
+                                                          setOpened(true);
+                                                      }
+                                                    : () => {
+                                                          setFilterType("member");
+                                                          setOpened(true);
+                                                      }
+                                            }
                                         >
                                             Filter
-                                            <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                            <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                         </button>
                                         <button
-                                            className="h-[40px] border-2 w-full md:w-[126px] text-left pl-2 border-slate-400 font-azeret-mono font-bold text-white text-base uppercase"
-                                            onClick={_.isEqual(filterType, "member-sort") ? () => {setFilterType(""); setOpenedSort(true);} : () => {setFilterType("member-sort"); setOpenedSort(true);}}
+                                            className="h-[40px] w-full border-2 border-slate-400 pl-2
+                                            text-left font-azeret-mono text-base font-bold uppercase text-white md:w-[126px]"
+                                            onClick={
+                                                _.isEqual(filterType, "member-sort")
+                                                    ? () => {
+                                                          setFilterType("");
+                                                          setOpenedSort(true);
+                                                      }
+                                                    : () => {
+                                                          setFilterType("member-sort");
+                                                          setOpenedSort(true);
+                                                      }
+                                            }
                                         >
                                             Sort
-                                            <ArrowDropDownIcon style={{color: "#ffffff", float: "right"}} />
+                                            <ArrowDropDownIcon style={{ color: "#ffffff", float: "right" }} />
                                         </button>
                                         <Filters filterType={filterType} />
-                                        <Sorts filterType={filterType}/>
+                                        <Sorts filterType={filterType} />
                                         <Drawer
                                             opened={opened}
                                             onClose={() => setOpened(false)}
@@ -95,7 +118,7 @@ const Members: NextPage<{ notFound: boolean }> = ({ notFound }): JSX.Element => 
                                 </React.Fragment>
                             }
                             footerButton={
-                                <button className="mt-3 h-[40px] w-full md:w-full bg-white font-azeret-mono text-lg font-bold uppercase text-floppy-disk">
+                                <button className="mt-3 h-[40px] w-full bg-white font-azeret-mono text-lg font-bold uppercase text-floppy-disk md:w-full">
                                     Load More
                                 </button>
                             }
